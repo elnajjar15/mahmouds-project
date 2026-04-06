@@ -1,331 +1,205 @@
-/* ===== Global ===== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  background: #0f172a;
-  color: white;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+    font-family: Arial, sans-serif;
 }
 
-/* ===== Navbar ===== */
+/* ===== NAVBAR ===== */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: rgba(15, 23, 42, 0.95);
-  width: 100%;
-  z-index: 1000;
+    width: 100%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  color: #38bdf8;
-  font-size: 22px;
-  font-weight: bold;
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
 }
 
-/* h1 اللي فوق */
-h1 {
-  margin: 20px 40px;
-  font-size: 28px;
-}
-
-h1 span {
-  color: #38bdf8;
+.logo h2 {
+    color: #ff3c3c;
 }
 
 nav ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
+    list-style: none;
+    display: flex;
+    gap: 25px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
-  position: relative;
-  transition: 0.3s;
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0%;
-  height: 2px;
-  background: #38bdf8;
-  transition: 0.3s;
+nav ul li a:hover {
+    color: #ff3c3c;
 }
 
-nav a:hover::after {
-  width: 100%;
-}
-
-nav a:hover {
-  color: #38bdf8;
-}
-
-/* ===== Hero ===== */
+/* ===== HERO ===== */
 .hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    min-height: 100vh;
 }
 
-/* صورة الهيرو */
-/* ===== Hero Image ===== */
-.hero img {
-  width: 200px;
-  /* كبر الصورة */
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-  margin-top: 10px;
-  /* خفف المسافة فوق */
-  margin-bottom: 10px;
-  /* خفف المسافة تحت */
-  transition: 0.3s;
-  /* لو عايز تأثير hover */
+.text h4 {
+    color: #aaa;
 }
 
-/* Optional: تأثير تكبير عند المرور */
-.hero img:hover {
-  transform: scale(1.05);
+.text h2 {
+    font-size: 40px;
 }
 
-/* ===== Buttons ===== */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #38bdf8;
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: 0.3s;
+.text h1 {
+    font-size: 60px;
+    color: #ff3c3c;
 }
 
-.btn:hover {
-  transform: scale(1.05);
+.hero-img img {
+    width: 350px;
+    transition: 0.5s;
 }
 
-/* ===== About ===== */
+.hero-img img:hover {
+    transform: scale(0.9);
+}
+
+/* ===== PRODUCTS ===== */
+#Prod {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.img-collection {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.img-collection img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.img-collection img:hover {
+    transform: scale(0.9);
+}
+
+/* ===== ABOUT ===== */
 .about {
-  padding: 60px 40px;
+    padding: 100px 20px;
+    background: #111;
+    color: #fff;
+    text-align: center;
 }
 
 .about-container {
-  display: flex;
-  justify-content: center;
+    max-width: 700px;
+    margin: auto;
 }
 
-.about-text {
-  max-width: 600px;
+.about p {
+    color: #ccc;
 }
 
-.about-text h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+/* ===== BUTTON ===== */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #e60023;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
 }
 
-.about-text p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-  color: #cbd5f5;
+/* ===== CONTACT ===== */
+.contact {
+    padding: 100px 20px;
+    background: #0d0d0d;
+    color: #fff;
+    text-align: center;
 }
 
-/* ===== Skills ===== */
-#skills {
-  padding: 50px 20px;
-  text-align: center;
+.contact-container {
+    max-width: 600px;
+    margin: auto;
 }
 
-.skills {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.skill {
-  background: #1e293b;
-  padding: 10px 20px;
-  border-radius: 8px;
+input, textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
 }
 
-/* ===== Projects ===== */
-#projects {
-  padding: 50px 20px;
-  text-align: center;
+button {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background: #e60023;
+    color: white;
+    cursor: pointer;
 }
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.card {
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-/* ===== Contact ===== */
-#contact {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-/* ===== Footer ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #020617;
-}
-
-/* ===== Responsive ===== */
-
-/* 📱 موبايل */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
-  nav {
-    flex-direction: column;
-    align-items: center;
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
 
-  }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-  .hero img {
-    width: 400px;
-    /* أصغر شوية على الموبايل */
-    margin-top: -450px;
-    /* margin-bottom: -500px; */
-    padding: 100px 0;
-  }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
 
-  nav ul {
-    flex-direction: column;
-    gap: 30px;
-    /* قلل المسافات */
-    margin-top: 5px;
-  }
+    .text h1 {
+        font-size: 40px;
+    }
 
-  nav a {
-    font-size: 30px;
-  }
+    .text h2 {
+        font-size: 30px;
+    }
 
-  h1 {
-    text-align: center;
-    margin: 30 0;
-    font-size: 20px;
-  }
+    .hero-img img {
+        width: 250px;
+    }
 
-  .logo {
-    display: none;
-  }
-
-  .hero {
-    padding-top: 50px;
-  }
-
-  .about-text {
-    font-size: large;
-    margin-top: -320px;
-  }
-}
-/* ===== Responsive (Tablet & Laptop Only) ===== */
-
-/* 1. التابلت (Tablet) - من عرض 768px إلى 1023px */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  nav {
-    padding: 15px 20px;
-  }
-
-  .logo {
-    font-size: 20px;
-  }
-
-  h1 {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .hero img {
-    width: 250px; /* حجم مناسب للتابلت */
-  }
-
-  .about {
-    padding: 40px 20px;
-  }
-
-  .about-container {
-    flex-direction: column; /* العناصر تحت بعض في التابلت لو المكان ضيق */
-    text-align: center;
-  }
-
-  .projects {
-    grid-template-columns: repeat(2, 1fr); /* عرض مشروعين فقط بجانب بعض */
-    padding: 0 20px;
-  }
-}
-
-/* 2. اللاب توب والشاشات الكبيرة (Laptop/Desktop) - من عرض 1024px فأكثر */
-@media screen and (min-width: 1024px) {
-  nav {
-    padding: 15px 80px; /* مسافات جانبية واسعة تعطي فخامة */
-  }
-
-  .container {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  h1 {
-    font-size: 32px;
-    margin: 40px 80px;
-  }
-
-  .hero img {
-    width: 350px; /* حجم كبير وواضح للاب توب */
-  }
-
-  .about-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px 80px ;
-  }
-
-  .about-text {
-    max-width: 700px;
-    font-size: 18px; /* تكبير الخط قليلاً للقراءة المريحة */
-  }
-
-  .projects {
-    grid-template-columns: repeat(3, 1fr); /* عرض 3 مشاريع بجانب بعض */
-    gap: 30px;
-  }
-
-  .skill {
-    padding: 15px 30px; /* أزرار مهارات أكبر */
-    font-size: 18px;
-  }
+    .img-collection {
+        grid-template-columns: 1fr;
+    }
 }
